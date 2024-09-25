@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+
+    /* Primary */
+
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--Pale-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pic {
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    /* so the card is on top of the svg since its overlapping */
+    background-color: white;
+    border-radius: 20px;
+    width: 28%;
+
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* card would be on top as the svg is in the background */
+
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 220px;
+    object-position: center;
+    object-fit: contain;
+}
+
+
+.details {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.sum {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sum-details {
+    color: var(--Desaturated-blue);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 20px 20px 20px;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.music {
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+
+}
+
+.musi-plan {
+    background-color: var(--Very-pale-blue);
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+}
+
+.boldy {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    font-size: 14px;
+}
+
+
+.plan {
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+.change {
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--Bright-blue);
+}
+
+.change:hover {
+    color: hsl(245, 83%, 68%);
+}
+
+.payment {
+    background-color: var(--Bright-blue);
+    color: var(--Pale-blue);
+    border-radius: 10px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 10px 10px var(--Pale-blue);
+    font-weight: 900;
+    font-size: 15px;
+
+}
+
+.payment:hover {
+    background-color: hsl(245, 83%, 68%);
+
+}
+
+.cancel {
+    border: none;
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    color: var(--Dark-blue);
+}
+
+@media only screen and (max-width:600px) {
+
+
+    .musi-plan {
+        width: 85%;
+    }
+
+    .container {
+        width: 85%;
+    }
+}
